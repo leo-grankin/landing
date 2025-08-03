@@ -13,15 +13,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
+    <div className="min-h-screen bg-gray-100 py-4 sm:py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-4 sm:mb-8">
           Chess Game
         </h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto items-start">
           {/* Left Column - Game Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <GameInfo
               status={getGameStatus()}
               currentTurn={gameState.currentTurn}
@@ -30,7 +30,7 @@ function App() {
           </div>
           
           {/* Center Column - Chess Board */}
-          <div className="lg:col-span-1 flex justify-center">
+          <div className="lg:col-span-1 order-1 lg:order-2 flex justify-center">
             <ChessBoard
               position={gameState.game.fen()}
               onPieceDrop={handlePieceDrop}
@@ -38,7 +38,7 @@ function App() {
           </div>
           
           {/* Right Column - Game Controls */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-3">
             <GameControls
               onNewGame={resetGame}
               onUndoMove={undoMove}
