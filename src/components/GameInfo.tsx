@@ -32,6 +32,15 @@ export const GameInfo: React.FC<GameInfoProps> = ({ status, currentTurn, moveHis
           {currentTurn === 'w' ? 'White' : 'Black'}
         </div>
       </div>
+
+      <div className="mb-3 sm:mb-4">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2">How to Move</h3>
+        <div className="bg-blue-50 rounded-lg p-2 sm:p-3 text-xs sm:text-sm">
+          <p className="text-blue-800 mb-1"><strong>Option 1:</strong> Drag and drop pieces</p>
+          <p className="text-blue-800 mb-1"><strong>Option 2:</strong> Click piece, then click destination</p>
+          <p className="text-blue-600 text-xs">Selected pieces are highlighted in yellow</p>
+        </div>
+      </div>
       
       <div>
         <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2">Move History</h3>
